@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div id="container1" style="background:#c3ffde;max-width: 100%;padding-top: 20px;">
+		<div class="row">
+			<div class="col-md-4"></div>
+		  <div class="col-md-4">
+			<h2>Abusiveness Detector</h2>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-8">
+		  </div>
+		  <div class="col-xs-3" style="margin-left: 30px;">
+			<a href="{{url_for('renderResultsPage',username = username)}} ">Show me the searches</a>
+		  </div>
+		  <div class="col-xs-2" style="margin-left: 30px;">
+			{% if username %}
+			welcome {{ username }}
+		  {% endif %}
+		  </div>
+		</div>
+	  </div>
+
+
+
+	<div class="ml-container" style="padding-left: 15px;">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+			<div class="row" style="height: auto; padding-top: 20px;">
+				<div class="col-md-3">
+					<p style="padding-top: 60px;padding-left: 60px;">Enter Your Search String Here</p>
+				</div>
+				<div class="col-md-5">
+					<textarea name="message" rows="6" cols="50"></textarea>
+				</div>
+				
+				<div class="col-md-2" style="padding-top: 53px;">
+					<input type="hidden" name = "username" style="display: none;visibility: hidden;" value= {{username}}></input>	
+					<input type="submit" class="btn btn-primary" value="Predict">
+	
+				</div>
+				
+			</div>
+
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+	<div id="container1" style="background:#c3ffde;max-width: 100%;padding-top: 20px;">
+		<div class="row">
+			<div class="col-md-4"></div>
+		  <div class="col-md-4">
+			<h2>Abusiveness Detector</h2>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-8" style="margin-left: 30px;">
+			<a href="{{url_for('renderHomePage',username = username)}} ">Back to Search</a>
+		  </div>
+		  <div class="col-xs-3" style="margin-left: 30px;">
+		  </div>
+		  <div class="col-xs-2" style="margin-left: 230px;">
+			{% if username %}
+			welcome {{ username }}
+		  {% endif %}
+		  </div>
+		</div>
+	  </div>
+
+
+
+	<div class="results row">
+		<div class="col-md-5"></div>	
+		<div class="col-md-3" style="padding-top: 20px;">
+			{% if prediction == 0%}
+			<h2 style="color:red;">Abusive</h2>
+			{% elif prediction == 1%}
+			<h2 style="color:blue;">Non Abusive</h2>
+			{% endif %}
+		
+		</div>
+		
+	</div>
+
+</body>
+</html>
