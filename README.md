@@ -16,7 +16,7 @@ Language- Python
 
 DataBase- MySQL
 
-Cloud used to deploy- AWS EC2 instance
+Cloud to deploy- AWS EC2 instance
 
 OperatingSystem- Linux 
 
