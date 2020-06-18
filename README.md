@@ -1,7 +1,7 @@
 # application-deployement-with-login-credentials
 Its an NLP model which is deployed online having a login page where users can track and see their previous searches.
 
-requirement.txt contains all the libraries and their versions used for the application.
+requirements.txt contains all the libraries and their versions used for the application.
 
 model.pkl & transformation.pkl are the pickle files excrated from the NLP model file using pickle.
 
