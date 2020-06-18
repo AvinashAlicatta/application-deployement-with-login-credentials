@@ -8,7 +8,7 @@ model.pkl & transformation.pkl are the pickle files excrated from the NLP model 
 The application is deployed using AWS EC2 instance .
 Using MySQL DB all the login information and the previous searches done from the respective user is saved and displayed in the account.
 
-For the EC2 instance to be awake 24/7, i have used pm2 application which helps in running the terminal even when it is closed.
+For the EC2 instance,i have used pm2 application which helps keeping the server up and running.
 
 Used:
 
