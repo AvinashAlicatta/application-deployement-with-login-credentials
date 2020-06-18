@@ -1,4 +1,11 @@
 # application-deployement-with-login-credentials
+Used:
+Language- Python
+DataBase- MySQL
+Cloud used to deploy- AWS EC2 instance
+OperatingSystem- Linux 
+Other 3rd party apps- Pm2 (https://www.npmjs.com/package/pm2)
+
 Its an NLP model which is deployed online having a login page where users can track and see their previous searches.
 
 requirement.txt contains all the libraries and their versions used for the application.
